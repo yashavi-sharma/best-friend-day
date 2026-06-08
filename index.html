@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Best Friend's Day Namrata ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial,sans-serif;
+    overflow-y:auto;
+    overflow-x:hidden;
+    padding:20px;
+
+    background-image:url("background.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    color:white;
+}
+
+.container{
+    text-align:center;
+    background:rgba(0,0,0,0.45);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.15);
+    padding:35px;
+    border-radius:25px;
+    color:white;
+    max-width:700px;
+    width:100%;
+    margin:40px 20px;
+    box-shadow:0 0 30px rgba(0,0,0,0.5);
+}
+
+h1{
+    font-size:2.5rem;
+    margin-bottom:20px;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px white;
+    }
+    to{
+        text-shadow:0 0 25px #3b82f6;
+    }
+}
+
+p{
+    font-size:1.2rem;
+    line-height:1.8;
+}
+
+button{
+    margin-top:25px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#1e3a8a;
+    font-size:1rem;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+#message{
+    display:none;
+    margin-top:25px;
+    font-size:1.15rem;
+    line-height:1.8;
+    animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.heart{
+    position:fixed;
+    color:white;
+    font-size:20px;
+    animation:float 8s linear infinite;
+    pointer-events:none;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💖 Happy Best Friend's Day 💖</h1>
+
+<p>
+🌸 Dear Namrata 🌸<br><br>
+
+Thank you for always being there for me,
+for listening to my random talks,
+for making me laugh when I'm sad,
+and for creating so many beautiful memories with me. ✨
+
+<br><br>
+
+You are not just my best friend,
+you are a part of my happiness. 💕
+</p>
+
+<button onclick="showMessage()">
+🎁 Click For A Surprise 🎁
+</button>
+
+<div id="message">
+
+🌹 Dear Namrata 🌹<br><br>
+
+No matter how many friends come and go,
+you will always have a special place in my heart. ❤️
+
+<br><br>
+
+Thank you for every laugh,
+every memory,
+every secret,
+and every moment we shared together. ✨
+
+<br><br>
+
+I am really lucky to have a bestie like you. 💕
+
+<br><br>
+
+Some people become friends,
+but very few become family.
+
+Thank you for being both, Namrata. ❤️
+
+<br><br>
+
+✨ Forever Besties ✨
+
+<br><br>
+
+🎉 Happy Best Friend's Day 🎉
+
+<br><br>
+
+💙🖤❤️🤍🤎
+
+</div>
+
+</div>
+
+<script>
+function showMessage(){
+    document.getElementById("message").style.display="block";
+}
+
+function createHeart(){
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "⭐";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },8000);
+}
+
+setInterval(createHeart,400);
+</script>
+
+</body>
+</html>
